@@ -28,7 +28,7 @@
 				display: block;
 				border-top: 1px solid rgba(0, 0, 0, 0.2);
 				border-radius: 8px;
-				overflow: hidden;
+				// overflow: hidden;
 				box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 				text-align: center;
 				transform-origin: top;
@@ -40,6 +40,37 @@
 					display: block;
 					opacity: 0;
 					transition: .3s ease .5s;
+
+					li{
+
+						&.profile{
+
+							.profile-wrapper{
+
+								#profileMenu{
+									&:checked + .profile-menu{
+										transform: translateY(0) translateX(-50%);
+										opacity: 1;
+										pointer-events: all;
+									}
+								}
+
+								.profile-menu{
+									left: 50%;
+									transform: translateY(20px) translateX(-50%);
+
+									&:before{
+										right: 0;
+										left: 50%;
+										transform: translateX(-50%) rotate(45deg);
+									}
+								}
+
+							}
+
+						}
+
+					}
 				}
 
 				&.active{

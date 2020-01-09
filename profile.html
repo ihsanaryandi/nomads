@@ -48,9 +48,34 @@
     				<li>
     					<a class="link" href="#">Testimonial</a>
     				</li>
-    				<li class="auth">
-    					<a class="link" href="#">Masuk</a>
-    				</li>
+
+                    <!-- --------------IF-NOT-AUTHENCTICATED-------------- -->
+    				<!-- a class="auth" href="#">
+    					<span class="link">Masuk</span>
+    				</a> -->
+
+                    <!-- -------------------IF-AUTHENTICATED-------------- -->
+                    <li class="profile">
+                        <div class="profile-wrapper">
+                            <label class="profile-img" for="profileMenu">
+                                <img src="img/user2.jpg">
+                            </label>
+                            <input type="checkbox" id="profileMenu">
+                            <div class="profile-menu">
+                                <ul>
+                                    <li>
+                                        <a class="profile-menu-link" href="#">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a class="profile-menu-link" href="#">My Transaction</a>
+                                    </li>
+                                    <li>
+                                        <a class="profile-menu-link" href="#">Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
     			</ul>
     		</div>
     	</div>
@@ -96,15 +121,15 @@
                             </ul>
                         </div>
                         <div class="menu">
-                            <div class="menu-name">
+                            <div class="open-collapse-menu menu-name" data-collapsetrigger="#transaction">
 
                                 <!-- ============MENING PAKE TAG a ATAU h3???============ -->
                                 <!-- --------------PILIH-WEH-BAHHH!!-------------- -->
-                                <a href="#">My Transaction</a>
-                                <!-- <h3>My Transaction</h3> -->
+                                <!-- <a href="#">My Transaction</a> -->
+                                <h3>My Transaction</h3>
 
                                 <!-- CLICK ME!!! -->
-                                <i class="open-collapse-menu fas fa-angle-down" data-collapsetrigger="#transaction"></i>
+                                <i class="fas fa-angle-down"></i>
 
                             </div>
                             <ul id="transaction">
@@ -117,15 +142,15 @@
                             </ul>
                         </div>
                         <div class="menu">
-                            <div class="menu-name">
+                            <div class="open-collapse-menu menu-name" data-collapsetrigger="#notification">
 
                                 <!-- ============MENING PAKE TAG a ATAU h3???============ -->
                                 <!-- --------------PILIH-WEH-BAHHH!!-------------- -->
-                                <a href="#">Notification</a>
-                                <!-- <h3>Notification</h3> -->
+                                <!-- <a href="#">Notification</a> -->
+                                <h3>Notification</h3>
 
                                 <!-- CLICK ME!!! -->   
-                                <i class="open-collapse-menu fas fa-angle-down" data-collapsetrigger="#notification"></i>
+                                <i class="fas fa-angle-down"></i>
 
                             </div>
                             <ul id="notification">
@@ -141,15 +166,15 @@
                             </ul>
                         </div>
                         <div class="menu">
-                            <div class="menu-name">
+                            <div class="open-collapse-menu menu-name" data-collapsetrigger="#lainnya">
 
                                 <!-- ============MENING PAKE TAG a ATAU h3???============ -->
                                 <!-- --------------PILIH-WEH-BAHHH!!-------------- -->
-                                <a href="#">Lainnya</a>
-                                <!-- <h3>Lainnya</h3> -->
+                                <!-- <a href="#">Lainnya</a> -->
+                                <h3>Lainnya</h3>
 
                                 <!-- CLICK ME!!! -->
-                                <i class="open-collapse-menu fas fa-angle-down" data-collapsetrigger="#lainnya"></i>
+                                <i class="fas fa-angle-down"></i>
                                 
 
                             </div>
@@ -191,11 +216,14 @@
                                 <div class="profile-form">
                                     <form>
                                         <h4>Ubah Data Diri</h4>
+
                                         <div class="inputs">
+
                                             <div class="input">
                                                 <label for="nama">Nama</label>
                                                 <input type="text" name="nama" id="nama">
                                             </div>
+
                                             <div class="input">
                                                 <label>Tanggal lahir</label>
                                                 <div class="selects">
@@ -219,6 +247,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="input">
                                                 <label for="jenis-kelamin">Jenis Kelamin</label>
                                                 <div class="radios">
@@ -244,19 +273,26 @@
                                                         <label class="radio-value" for="jenisLainnya">Lainnya</label>
                                                     </div>
                                                 </div>
-                                            </div>   
+                                            </div>  
+
                                         </div>
 
                                         <h4>Ubah Kontak</h4>
                                         <div class="inputs">
-                                            <div class="input mb-3">
+                                            <div class="input mb-4">
                                                 <label for="Email">Email</label>
-                                                <input type="text" name="email" id="email">
+                                                <div class="relative">
+                                                    <input type="text" name="email" id="email">
+                                                 <a class="verification" href="#">Klik disini untuk melakukan verifikasi Email anda.</a>
+                                                </div>
                                                 <span class="status">Terverifikasi</span>
                                             </div>
                                             <div class="input">
                                                 <label for="nomor-hp">Nomor HP</label>
-                                                <input type="text" name="nomor-ho" id="nomor-hp">
+                                                <div class="relative">
+                                                    <input type="text" name="nomor-hp" id="nomor-hp">
+                                                    <a class="verification" href="#">Klik disini untuk melakukan verifikasi Nomor anda.</a>
+                                                </div>
                                                 <span class="status">Terverifikasi</span>
                                             </div>
                                         </div>
