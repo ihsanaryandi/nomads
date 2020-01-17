@@ -42,4 +42,65 @@
 
 })();
 
+(function selectPhoto(){
 
+	const inputFile = document.querySelector('input#selectPhoto');
+	const userPhoto = document.querySelector('#userPhoto');
+	const fileNameElement = document.querySelector('#fileName');
+
+	if(inputFile)
+	{
+		inputFile.addEventListener('change', function(e){
+
+			let fileName = inputFile.files[0].name;
+			let filePath = inputFile.dataset.filepath;
+
+			userPhoto.src = filePath + fileName;
+			fileNameElement.innerHTML = 'Picture Selected : <span class="text-success">' + fileName + '</span>';
+
+
+
+		})
+	}
+
+})();
+
+(function seePassword(){
+
+	const toggler = document.querySelectorAll('button[data-passwordtarget]');
+
+	if(toggler)
+	{
+		toggler.forEach(toggle => {
+			
+			toggle.addEventListener('click', e => {
+
+				e.preventDefault();
+
+				const target = toggle.dataset.passwordtarget;
+
+				const passwordElement = document.querySelector(target);
+
+				const passwordElementType = passwordElement.getAttribute('type');
+
+				const icon = toggle.querySelector('i');
+
+				if(passwordElementType == 'password')
+				{
+					passwordElement.setAttribute('type', 'text');
+					icon.classList.remove('fa-eye');
+					icon.classList.add('fa-eye-slash');
+				}
+				else
+				{
+					passwordElement.setAttribute('type', 'password');
+					icon.classList.add('fa-eye');
+					icon.classList.remove('fa-eye-slash');
+				}
+
+			});
+
+		})
+	}
+
+})();

@@ -5,171 +5,22 @@
 // --------Templates---------
 @import './templates/header';
 @import './templates/footer';
+@import './templates/sidebar';
 
 // ---------PROFILE---------
 
 #profile{
 	position: relative;
-	margin-top: -70px;
+	margin-top: -80px;
 	padding-top: 80px;
 	margin-bottom: 80px;
 
-	&::before{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 50vh;
-		background-color: $abu;
-		z-index: -1;
-	}
-
-	// --1
-	.nomads-breadcrumb{
-		font-size: 18px;
-		color: #fff;
-
-		a{
-			position: relative;
-			display: inline-block;
-			color: inherit;
-			text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-			margin: 0 5px;
-		}
-	}
-
 	// --2
 	.profile-card{
-		background-color: #fff;
-		padding: 20px;
-		border-radius: 15px;
-		box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-
-		// --1
-		&.left{
-			color: $biruGelap;
-
-			// --1
-			.user{
-				display: flex;
-				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-				padding-bottom: 20px;
-				margin-bottom: 20px;
-
-				// --1
-				.left{
-					width: 50px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					// --1
-					.user-img{
-						width: 50px;
-						height: 50px;
-						border-radius: 50%;
-						overflow: hidden;
-
-						// --1
-						img{
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-						}
-
-					}
-					
-				}
-
-				// --2
-				.right{
-					margin-left: 15px;
-
-					.user-name{
-						margin: 0;
-					}
-
-					.user-edit{
-						font-size: 12px;
-						text-decoration: none;
-						color: rgba($biruGelap, .8);
-						font-weight: 500;
-					}
-				}
-
-			}
-
-			// --2
-			.menu{
-
-				ul{
-					list-style: none;
-					transition: .3s ease;
-
-					li{
-						margin-bottom: 5px;
-
-						.menu-link{
-							color: $abu;
-							text-decoration: none;
-							font-size: 15px;
-
-							&:hover{
-								font-weight: 500;
-							}
-						}
-					}
-				}
-
-				.menu-name{
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					margin-bottom: 10px;
-					cursor: pointer;
-					user-select: none;
-
-					h3,
-					a{
-						text-decoration: none;
-						color: inherit;
-						font-weight: 500;
-						font-size: 18px;
-						margin: 0;
-					}
-
-					i{
-						font-size: 18px;
-						cursor: pointer;
-						user-select: none;
-						color: inherit;
-						transition: .3s ease;
-					}
-				}
-			}
-
-		}
+		
 
 		// --2
 		&.right{
-
-			color: $biruGelap;
-
-			.title{
-				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-				h1{
-					font-size: 24px;
-					font-weight: 700;
-					color: inherit;
-					margin-bottom: 5px;
-				}
-				p{
-					color: inherit;
-					font-size: 15px;
-				}
-			}
 
 			.user-profile-photo-card{
 				padding: 10px;
@@ -359,7 +210,7 @@
 								display: inline-block;
 								width: 100%;
 								left: 0;
-								font-size: 10px;
+								font-size: 12px;
 								overflow: hidden;
 								text-overflow: ellipsis;
 								white-space: nowrap;
@@ -380,7 +231,7 @@
 						.status{
 							position: absolute;
 							top: 50%;
-							right: -70px;
+							left: calc(100% + 5px);
 							transform: translateY(-50%);
 							font-size: 10px;
 							display: inline-block;

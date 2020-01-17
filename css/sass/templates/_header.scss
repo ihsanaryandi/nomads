@@ -8,9 +8,9 @@
 // -----------Navbar------------
 .nomads-navbar{
 	position: relative;
-	width: 90%;
 	margin: auto;
 	padding: 0;
+	width: 92%;
 	z-index: 10;
 	background-color: $putih;
 	border-bottom-left-radius: 8px;
@@ -79,7 +79,7 @@
 							height: 2px;
 							left: 0;
 							bottom: 0;
-							transition: .3s ease;
+							transition: .25s ease;
 							transform: scaleX(0);
 							transform-origin: left;
 							background-color: $biruGelap;
@@ -170,6 +170,9 @@
 										.profile-menu-link{
 											text-decoration: none;
 											color: $biruGelap;
+											border: none;
+											display: inline;
+											background-color: transparent;
 
 											&:hover{
 												font-weight: 500;

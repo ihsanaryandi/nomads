@@ -6,9 +6,9 @@
 
 .nomads-navbar {
   position: relative;
-  width: 90%;
   margin: auto;
   padding: 0;
+  width: 92%;
   z-index: 10;
   background-color: #FFF;
   border-bottom-left-radius: 8px;
@@ -64,7 +64,7 @@
   height: 2px;
   left: 0;
   bottom: 0;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
   transform: scaleX(0);
   transform-origin: left;
   background-color: #0B1C4D;
@@ -141,6 +141,9 @@
 .nomads-navbar .items-container .menu-links ul li.profile .profile-wrapper .profile-menu ul li .profile-menu-link {
   text-decoration: none;
   color: #0B1C4D;
+  border: none;
+  display: inline;
+  background-color: transparent;
 }
 .nomads-navbar .items-container .menu-links ul li.profile .profile-wrapper .profile-menu ul li .profile-menu-link:hover {
   font-weight: 500;
@@ -214,13 +217,7 @@
   pointer-events: none;
 }
 
-#profile {
-  position: relative;
-  margin-top: -70px;
-  padding-top: 80px;
-  margin-bottom: 80px;
-}
-#profile::before {
+.custom-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -230,77 +227,109 @@
   background-color: #909DC5;
   z-index: -1;
 }
-#profile .nomads-breadcrumb {
+
+.nomads-breadcrumb {
   font-size: 18px;
   color: #fff;
 }
-#profile .nomads-breadcrumb a {
+.nomads-breadcrumb a {
   position: relative;
   display: inline-block;
   color: inherit;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   margin: 0 5px;
 }
-#profile .profile-card {
+
+.profile-card {
   background-color: #fff;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
-#profile .profile-card.left {
+.profile-card.right {
   color: #0B1C4D;
 }
-#profile .profile-card.left .user {
+.profile-card.right .title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.profile-card.right .title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 5px;
+}
+.profile-card.right .title p {
+  color: inherit;
+  font-size: 15px;
+}
+
+.profile-card.left {
+  color: #0B1C4D;
+}
+.profile-card.left .user {
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-#profile .profile-card.left .user .left {
+.profile-card.left .user .left {
   width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#profile .profile-card.left .user .left .user-img {
+.profile-card.left .user .left .user-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
 }
-#profile .profile-card.left .user .left .user-img img {
+.profile-card.left .user .left .user-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#profile .profile-card.left .user .right {
+.profile-card.left .user .right {
   margin-left: 15px;
 }
-#profile .profile-card.left .user .right .user-name {
+.profile-card.left .user .right .user-name {
   margin: 0;
 }
-#profile .profile-card.left .user .right .user-edit {
+.profile-card.left .user .right .user-edit {
   font-size: 12px;
   text-decoration: none;
   color: rgba(11, 28, 77, 0.8);
   font-weight: 500;
 }
-#profile .profile-card.left .menu ul {
+.profile-card.left .menu ul {
   list-style: none;
   transition: 0.3s ease;
 }
-#profile .profile-card.left .menu ul li {
+.profile-card.left .menu ul li {
   margin-bottom: 5px;
 }
-#profile .profile-card.left .menu ul li .menu-link {
+.profile-card.left .menu ul li.menu-active {
+  background-color: #0B1C4D;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-left: -5px;
+  width: calc(100% + 10px);
+}
+.profile-card.left .menu ul li.menu-active .menu-link {
+  color: #fff;
+}
+.profile-card.left .menu ul li.menu-active .menu-link:hover {
+  font-weight: unset;
+}
+.profile-card.left .menu ul li .menu-link {
   color: #909DC5;
   text-decoration: none;
   font-size: 15px;
 }
-#profile .profile-card.left .menu ul li .menu-link:hover {
+.profile-card.left .menu ul li .menu-link:hover {
   font-weight: 500;
 }
-#profile .profile-card.left .menu .menu-name {
+.profile-card.left .menu .menu-name {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -308,36 +337,27 @@
   cursor: pointer;
   user-select: none;
 }
-#profile .profile-card.left .menu .menu-name h3,
-#profile .profile-card.left .menu .menu-name a {
+.profile-card.left .menu .menu-name h3,
+.profile-card.left .menu .menu-name a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
   font-size: 18px;
   margin: 0;
 }
-#profile .profile-card.left .menu .menu-name i {
+.profile-card.left .menu .menu-name i {
   font-size: 18px;
   cursor: pointer;
   user-select: none;
   color: inherit;
   transition: 0.3s ease;
 }
-#profile .profile-card.right {
-  color: #0B1C4D;
-}
-#profile .profile-card.right .title {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-#profile .profile-card.right .title h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: inherit;
-  margin-bottom: 5px;
-}
-#profile .profile-card.right .title p {
-  color: inherit;
-  font-size: 15px;
+
+#profile {
+  position: relative;
+  margin-top: -80px;
+  padding-top: 80px;
+  margin-bottom: 80px;
 }
 #profile .profile-card.right .user-profile-photo-card {
   padding: 10px;
@@ -497,7 +517,7 @@
   display: inline-block;
   width: 100%;
   left: 0;
-  font-size: 10px;
+  font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -512,7 +532,7 @@
 #profile .profile-card.right .profile-form .inputs .input .status {
   position: absolute;
   top: 50%;
-  right: -70px;
+  left: calc(100% + 5px);
   transform: translateY(-50%);
   font-size: 10px;
   display: inline-block;
@@ -573,6 +593,9 @@
     right: 0;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
+  }
+  .nomads-navbar .items-container .menu-links ul .auth {
+    border-bottom-left-radius: 8px;
   }
   .nomads-navbar .items-container .menu-links.active {
     transform: scaleY(1);

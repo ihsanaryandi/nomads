@@ -19,7 +19,11 @@
     <nav class="nomads-navbar">
     	<div class="items-container">
     		<div class="logo">
-    			<a href="#">Nomads</a>
+    			<a href="#">
+                    <div class="logo-wrapper">
+                        <img src="img/nomads.jpg">
+                    </div>         
+                </a>
     		</div>	
     		<div class="items-collapse">
     			<label for="collapse" class="toggler">
@@ -28,7 +32,7 @@
     		</div>
     		<input type="checkbox" id="collapse">
     		<div class="menu-links">
-    			<ul>
+    			<ul> 
     				<li class="active">
     					<a class="link" href="#">Home</a>
     				</li>
@@ -41,9 +45,34 @@
     				<li>
     					<a class="link" href="#">Testimonial</a>
     				</li>
-    				<a class="auth" href="#">
+
+                    <!-- --------------IF-NOT-AUTHENCTICATED-------------- -->
+    				<!-- <a class="auth" href="#">
     					<span class="link">Masuk</span>
-    				</a>
+    				</a> -->
+
+                    <!-- -------------------IF-AUTHENTICATED-------------- -->
+                    <li class="profile">
+                        <div class="profile-wrapper">
+                            <label class="profile-img" for="profileMenu">
+                                <img src="img/user2.jpg">
+                            </label>
+                            <input type="checkbox" id="profileMenu">
+                            <div class="profile-menu">
+                                <ul>
+                                    <li>
+                                        <a class="profile-menu-link" href="#">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a class="profile-menu-link" href="#">My Transaction</a>
+                                    </li>
+                                    <li>
+                                        <a class="profile-menu-link" href="#">Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
     			</ul>
     		</div>
     	</div>
