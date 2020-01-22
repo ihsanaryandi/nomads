@@ -1,3 +1,73 @@
+.nomads-btn {
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  padding: 8px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF801D;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  border: none;
+}
+.nomads-btn:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff8e37;
+}
+
+.muted {
+  color: rgba(0, 0, 0, 0.4);
+  background-color: #E4E6EB;
+  pointer-events: none;
+}
+
+.custom-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background-color: #909DC5;
+  z-index: -1;
+}
+
+.nomads-breadcrumb {
+  font-size: 18px;
+  color: #fff;
+}
+.nomads-breadcrumb a {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  margin: 0 5px;
+}
+
+.profile-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.profile-card.right {
+  color: #0B1C4D;
+}
+.profile-card.right .title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.profile-card.right .title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 5px;
+}
+.profile-card.right .title p {
+  color: inherit;
+  font-size: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -192,75 +262,6 @@
 #footer .footer-contents .copyright p {
   color: #fff;
   margin: 0;
-}
-
-.nomads-btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 20px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #FF801D;
-  transition: 0.3s ease;
-  border-radius: 5px;
-  border: none;
-}
-.nomads-btn:hover {
-  text-decoration: none;
-  color: #fff;
-  background-color: #ff8e37;
-}
-
-.muted {
-  color: rgba(0, 0, 0, 0.4);
-  background-color: #E4E6EB;
-  pointer-events: none;
-}
-
-.custom-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50vh;
-  background-color: #909DC5;
-  z-index: -1;
-}
-
-.nomads-breadcrumb {
-  font-size: 18px;
-  color: #fff;
-}
-.nomads-breadcrumb a {
-  position: relative;
-  display: inline-block;
-  color: inherit;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  margin: 0 5px;
-}
-
-.profile-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-}
-.profile-card.right {
-  color: #0B1C4D;
-}
-.profile-card.right .title {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.profile-card.right .title h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: inherit;
-  margin-bottom: 5px;
-}
-.profile-card.right .title p {
-  color: inherit;
-  font-size: 15px;
 }
 
 .profile-card.left {
