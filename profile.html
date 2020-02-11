@@ -85,7 +85,7 @@
 
     <!-- ----------------PROFILE-SECTION---------------- -->
     <section class="custom-bg" id="profile">
-        <div class="container">
+        <div class="nomads-container">
             <div class="nomads-breadcrumb my-4">
                 <a href="#">My Profile</a>
                 <span>/</span>
@@ -299,7 +299,7 @@
                                                 <label for="nomor-hp">Nomor HP</label>
                                                 <div class="relative">
                                                     <input type="text" name="nomor-hp" id="nomor-hp">
-                                                    <a class="verification" href="#">Klik disini untuk melakukan verifikasi Nomor anda.</a>
+                                                    <a class="verification" href="#" data-nmodal="#verifyPhone">Klik disini untuk melakukan verifikasi Nomor anda.</a>
                                                 </div>
                                                 <span class="status">Terverifikasi</span>
                                             </div>
@@ -399,6 +399,43 @@
             </div>
         </div>
     </section>
+
+
+    <!-- ---------------------VERIFY-PHONE-MODAL--------------------- -->
+    <div class="nomads-modal" id="verifyPhone">
+        <div class="overlay" data-close="true"></div>
+        <div class="modal-box">
+            <div class="close-modal" data-close="true">&times;</div>
+            <div class="ilustration">
+                <img src="img/verify-phone.png">
+            </div>
+            <h4 class="title mt-2">Verify Your Phone</h4>
+            <p class="message">Please type the magic number sent to +62 8214 4853 0032</p>
+            <form class="verify-phone" action="" method="POST">
+                <div class="magic-number-inputs error" id="magicNumberInputs">
+                    <input type="number" name="digit1">
+                    <input type="number" name="digit2">
+                    <input type="number" name="digit3">
+                    <input type="number" name="digit4">
+                </div>
+                <small class="verify-error mt-2">Wrong digits!</small>
+                <button class="nomads-btn py-2 px-5 mt-2" type="submit" style="font-size: 16px;">Verify</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ---------------------EMAIL-MODAL--------------------- -->
+    <div class="nomads-modal active" id="emailSent">
+        <div class="overlay"></div>
+        <div class="modal-box">
+            <div class="ilustration" style="width: 130px;">
+                <img src="img/email-success.png">
+            </div>
+            <h4 class="title mt-2">Email Sent</h4>
+            <p class="message">Kindly check your inbox in order to verify the account</p>
+            <button class="nomads-btn py-2 px-5 mt-2" data-close="true" style="font-size: 16px;">Done</button>
+        </div>
+    </div>
 
 <script type="text/javascript" src="js/app.js"></script>
 
